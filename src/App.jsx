@@ -1,16 +1,22 @@
-import React from 'react'
-import {Routes,Route} from 'react-router-dom'
-import Home from './pages/Home'
-import Navbar from './components/Navbar'
+import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
 
-const App = () =>{
-  return(
+const App = () => {
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
     <div>
-      <Navbar/> 
+      <Navbar />
       <Routes>
-        <Route path='/' element={<Home/>} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </div>
-  )
-}
-export default App 
+  );
+};
+
+export default App;

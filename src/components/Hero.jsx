@@ -6,15 +6,14 @@ const Hero = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      viewport={{ once: true }}
+      animate={{ opacity: 1, y: 0 }}
       id='home'
       className='min-h-screen flex items-center pt-20 pb-16 bg-linear-to-r from-[#1a1a1a] via-dark-300 to-[#1a1a1a]'
     >
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-start gap-12">
         {/*left side div*/}
-        <div className='md:w-1/2 mb-10 md:mb-0'>
+        <div className='md:w-1/2 mb-10 md:mb-0 text-left'>
           <h1 className='text-4xl md:text-6xl font-bold mb-4'>
             Hi, I'm  <span className='text-purple'>Suprabh Sharma</span>
           </h1>
@@ -32,7 +31,7 @@ const Hero = () => {
 
         </div>
         {/*right side image*/}
-        <div className='md:w-1/2 flex justify-center'>
+        <div className='md:w-1/2 flex justify-center md:justify-end'>
           <div className='relative w-64 h-64 md:w-80 md:h-80'>
             <div className='absolute inset-0 rounded-full
             bg-linear-to-r from-purple to-pink'>

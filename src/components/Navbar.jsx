@@ -6,8 +6,8 @@ const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [hovered, setHovered] = useState(false);
     return (
-        <nav className='fixed w-full z-50 bg-dark-100/90 backdrop-blur-sm py-1 px-8 shadow-lg'>
-            <div className='container mx-auto flex justify-between items-center'>
+        <nav className='fixed w-full z-50 bg-dark-100/90 backdrop-blur-sm shadow-lg'>
+            <div className='max-w-[1600px] mx-auto px-8 lg:px-12 flex justify-between items-center py-2'>
                 <div
                     className="relative inline-block"
                     onMouseEnter={() => setHovered(true)}

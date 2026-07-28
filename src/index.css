@@ -36,6 +36,10 @@
   50% {border-color: #8B5CF6;}
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 
