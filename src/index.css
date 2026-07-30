@@ -40,7 +40,11 @@ html {
   scroll-behavior: smooth;
 }
 
-
+.contact-submit:hover,
+.contact-submit:active {
+  background-color: #ec4899;
+  transform: translateY(-2px);
+}
 
 
 
