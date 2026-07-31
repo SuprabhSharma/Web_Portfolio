@@ -7,14 +7,20 @@
 }
 
 @theme {
-  --color-dark-100:#1A1A1A;
-  --color-dark-200:#1f1f1f;
-  --color-dark-300:#2d2d2d;
-  --color-dark-400:#3d3d3d;
-  --color-purple:#BB5CF6;
-  --color-pink:#EC4899;
-  --color-blue:#3B82F6;
+  /* Backgrounds */
+  --color-dark-100: #050816;
+  --color-dark-200: #0B1120;
+  --color-dark-300: #111827;
+  --color-dark-400: #1F2937;
 
+  /* Accent Colors */
+  --color-purple: #8B5CF6;
+  --color-pink: #EC4899;
+  --color-blue: #38BDF8;
+
+  /* Optional */
+  --color-cyan: #22D3EE;
+  --color-green: #34D399;
 }
 
 .typewriter {
@@ -28,7 +34,7 @@
 
 @keyframes typing{
   from { width : 0;}
-  to {width: 15ch;} /*match the number of characters*/
+  to {width: 18ch;}
 }
 
 @keyframes blink-caret{
@@ -40,12 +46,21 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .typewriter {
+    width: auto;
+    border-right: 0;
+    animation: none;
+  }
+}
+
 .contact-submit:hover,
 .contact-submit:active {
   background-color: #ec4899;
   transform: translateY(-2px);
 }
-
-
-
 

@@ -10,7 +10,7 @@ const About = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: true }}
             id='about'
-            className='py-20 bg-dark-200 scroll-mt-20'
+            className='py-20 bg-dark-200'
         >
             <div className='max-w-7xl  mx-auto px-6'>
                 {/*Heading*/}

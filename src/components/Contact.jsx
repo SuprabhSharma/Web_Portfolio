@@ -10,7 +10,7 @@ const Contact = () => {
       transition={{ duration: 1, ease: 'easeOut' }}
       viewport={{ once: true }}
       id='contact'
-      className='py-20 bg-dark-200'
+      className='py-20 bg-dark-100'
     >
       <div className='max-w-7xl mx-auto px-6'>
         <h2 className='text-3xl font-bold text-center mb-4'>Get In <span className='text-purple'>Touch</span></h2>
