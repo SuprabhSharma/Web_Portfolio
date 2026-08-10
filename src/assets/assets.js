@@ -92,7 +92,7 @@ export const projects = [
     image: projectImg1,
     tech: ["Python", "OpenCV", "Facial Recognition", "Machine Learning", "Flask/SQL"],
     icons: [FaRobot, FaBrain, FaDatabase],
-    demo: "https://your-face-attendance-demo.com", // Replace with your actual live link
+    demo: "https://face-attendance-deepface.onrender.com/", // Replace with your actual live link
   },
   {
     title: "GenAI Assistant",
