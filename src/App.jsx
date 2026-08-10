@@ -10,11 +10,19 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+    <div className="min-h-screen bg-dark-100 text-[#f8fafc] relative overflow-x-hidden">
+      {/* 0-Lag GPU Ambient Background */}
+      <div className="ambient-bg" aria-hidden="true" />
+
+      {/* Main Content Layer */}
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </main>
+      </div>
     </div>
   );
 };

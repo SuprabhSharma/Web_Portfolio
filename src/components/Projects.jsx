@@ -1,43 +1,46 @@
 import React from 'react'
-import {motion} from 'framer-motion'
 import { projects } from '../assets/assets'
 import ProjectCard from './ProjectCard'
-import { FaArrowRight } from 'react-icons/fa6';
+import { FaGithub } from 'react-icons/fa6';
 
 const Projects = () => {
   return (
-    <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, ease: 'easeOut' }}
-    viewport={{ once: true }}
-    id='projects'
-    className='py-20 bg-dark-200'
-    >
-      <div className='max-w-7xl  mx-auto px-6'>
-        <h2 className='text-3xl font-bold text-center mb-4'>My
-                    <span className='text-purple '>Work</span>
-        </h2>
-        <p className='text-gray-400 text-center mx-auto max-w-2xl mb-16'>A selection of my previous work</p>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto'>
-        {/* Project card*/}
-        {
-          projects.map((project,index)=>(
-            <ProjectCard key={index} {...project}/>
+    <section id='projects' className='py-20 sm:py-28 bg-dark-200/50 relative overflow-hidden'>
+      {/* Subtle Futuristic Section Divider Beam */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-pink/40 to-transparent" />
 
-          ))
-        }
+      <div className='max-w-7xl mx-auto px-5 sm:px-6 lg:px-8'>
+        <div className="text-center">
+          <h2 className='text-3xl sm:text-4xl md:text-5xl font-black mb-3 text-white tracking-tight'>
+            Featured <span className='bg-gradient-to-r from-purple-light via-pink to-cyan-glow bg-clip-text text-transparent'>Projects</span>
+          </h2>
+          <p className='text-gray-400 max-w-2xl mx-auto mb-12 sm:mb-16 text-xs sm:text-sm md:text-base'>
+            Real-world applications in Artificial Intelligence, Computer Vision, Data Science, and Full Stack Web
+          </p>
         </div>
-        <div className='text-center mt-12'>
-          <a href="#" className='inline-flex items-center px-6 py-3 border border-purple
-          rounded-lg font-medium hover:bg-purple/20 transition duration-300  '>
-            <span>View More Projects</span>
-            <FaArrowRight className='ml-2'/>
-          </a>
 
+        {/* 100% Equal Height Responsive Grid */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto items-stretch'>
+          {projects.map((project, index) => (
+            <div key={index} className="h-full">
+              <ProjectCard {...project} />
+            </div>
+          ))}
+        </div>
+
+        <div className='text-center mt-12 sm:mt-14'>
+          <a 
+            href="https://github.com/SuprabhSharma" 
+            target="_blank" 
+            rel="noreferrer"
+            className='inline-flex items-center gap-2.5 px-6 py-3 sm:px-7 sm:py-3.5 bg-dark-300 border border-purple/40 rounded-xl text-sm sm:text-base font-bold text-white hover:border-cyan-glow hover:text-cyan-glow active:scale-98 transition-all duration-150'
+          >
+            <FaGithub className='text-base sm:text-lg' />
+            <span>Explore More on GitHub</span>
+          </a>
         </div>
       </div>
-    </motion.div>
+    </section>
   )
 }
 
