@@ -3,14 +3,14 @@ import { FaArrowUpRightFromSquare, FaCode } from 'react-icons/fa6'
 
 const ProjectCard = ({ title, description, image, tech, demo }) => {
   return (
-    <div className='h-full flex flex-col justify-between bg-dark-300/90 rounded-2xl overflow-hidden border border-white/5 hover:border-purple/70 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg group'>
+    <article className='h-full flex flex-col justify-between bg-dark-300/90 rounded-2xl overflow-hidden border border-white/5 hover:border-purple/70 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg group'>
       {/* Top Image & Content Container */}
       <div className='flex flex-col flex-1'>
         {/* Image */}
         <div className='overflow-hidden relative h-48 w-full shrink-0'>
           <img 
             src={image} 
-            alt={title} 
+            alt={`${title} - Project by Suprabh Sharma`} 
             loading="lazy"
             decoding="async"
             className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105' 
@@ -62,7 +62,7 @@ const ProjectCard = ({ title, description, image, tech, demo }) => {
           </div>
         )}
       </div>
-    </div>
+    </article>
   )
 }
 

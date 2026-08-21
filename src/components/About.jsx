@@ -28,7 +28,7 @@ const About = () => {
                                 decoding="async"
                                 className='w-full h-[420px] sm:h-[480px] lg:h-[520px] object-cover object-top transition-transform duration-500 group-hover:scale-102'
                                 src={assets.Suprabh}
-                                alt='Suprabh Sharma'
+                                alt='Suprabh Sharma - Software Developer & AI Engineer'
                             />
                             {/* Subtle Bottom Ambient Gradient Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-dark-300/80 via-transparent to-transparent pointer-events-none"></div>

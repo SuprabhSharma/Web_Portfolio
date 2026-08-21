@@ -267,9 +267,9 @@ const Contact = () => {
           </div>
         </div>
 
-        <p className='mt-14 text-center text-xs text-gray-500 font-medium'>
-          © {new Date().getFullYear()} Suprabh Sharma. Designed & Built with Precision.
-        </p>
+        <footer className='mt-14 text-center text-xs text-gray-500 font-medium'>
+          <p>© {new Date().getFullYear()} Suprabh Sharma. Designed & Built with Precision.</p>
+        </footer>
       </div>
     </section>
   )
